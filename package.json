@@ -1,0 +1,19 @@
+{
+  "name": "fire-tool",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start"
+  },
+  "dependencies": {
+    "express": "^4.17.1" // Add any other dependencies your project requires
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": "20.x",
+    "npm": "10.7.0"
+  }
+}
