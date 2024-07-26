@@ -1,13 +1,22 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import HomePage from './pages/HomePage';
+import FeedbackPage from './pages/FeedbackPage';
+import ChartPage from './pages/ChartPage';
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <h1>Welcome to QA Tracker</h1>
-      </header>
-    </div>
+    <Router>
+      <div className='App'>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/feedback' element={<FeedbackPage />} />
+          <Route path='/chart' element={<ChartPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
